@@ -1,0 +1,83 @@
+/* style.css */
+
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Use a common font */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white; /* Or any color you prefer */
+    position: relative; /* For positioning the shape */
+}
+
+.background-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background-color: #0a53c9; /* Blue color */
+    border-bottom-right-radius: 100px; /* Creates the rounded corner */
+    z-index: -1; /* Place the shape behind the content */
+}
+
+.container {
+    text-align: center; /* Center the content */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for the container */
+    padding: 40px; /* Add padding around the content */
+    border-radius: 10px; /* Round the container corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Space between logo and button */
+}
+
+.logo span {
+    color: #0a53c9; /* Blue color for "Up" */
+    font-weight: bold;
+}
+
+.button {
+    margin-top: 20px;
+    background-color: #0a53c9; /* Blue color */
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Increased padding */
+    font-size: 18px; /* Slightly larger font */
+    border-radius: 8px; /* More rounded corners */
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background-color: #0848a5; /* Darker blue on hover */
+}
+
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}

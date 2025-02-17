@@ -1,11 +1,10 @@
 import React from 'react';
-import {{ Link }} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Explore = () => {{
+const Dashboard = () => {
     return (
         <div>
-            <h1>Explore</h1>
-            <p>Cette page est en cours de conversion vers React TypeScript.</p>
+            <h1>Dashboard</h1>
             <nav>
                 <ul>
                     <li><Link to="/">Accueil</Link></li>
@@ -18,6 +17,6 @@ const Explore = () => {{
             </nav>
         </div>
     );
-}};
+};
 
-export default Explore;
+export default Dashboard;

@@ -1,11 +1,12 @@
 import React from 'react';
-import {{ Link }} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import '../../index.css'
 
-const Dashboard = () => {{
+const Login = () => {
     return (
         <div>
-            <h1>Dashboard</h1>
-            <p>Cette page est en cours de conversion vers React TypeScript.</p>
+            <h1>Login</h1>
+            
             <nav>
                 <ul>
                     <li><Link to="/">Accueil</Link></li>
@@ -18,6 +19,6 @@ const Dashboard = () => {{
             </nav>
         </div>
     );
-}};
+};
 
-export default Dashboard;
+export default Login;
