@@ -10,13 +10,14 @@ import StudentLogin from './pages/Student/Login'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+
 
   return (
     <Router>
       <Routes>
         <Route path="/" element={
-          <h1>Bienvenue sur SkillUp</h1>
+          <StudentExplore/>
           } 
         />
         <Route path="/admin/login" element={<AdminLogin />} />
