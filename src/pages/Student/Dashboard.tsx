@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
-const Dashboard = () => {
+const StudentDashboard = () => {
     return (
         <div>
             <h1>Dashboard</h1>
+            <p>Cette page est en cours de conversion vers React TypeScript.</p>
             <nav>
                 <ul>
                     <li><Link to="/">Accueil</Link></li>
@@ -19,4 +20,4 @@ const Dashboard = () => {
     );
 };
 
-export default Dashboard;
+export default StudentDashboard;

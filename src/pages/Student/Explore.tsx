@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../index.css'
 
-const Login = () => {
+const StudentExplore = () => {
     return (
         <div>
-            <h1>Login</h1>
-            
+            <h1>Explore</h1>
             <nav>
                 <ul>
                     <li><Link to="/">Accueil</Link></li>
@@ -21,4 +19,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default StudentExplore;

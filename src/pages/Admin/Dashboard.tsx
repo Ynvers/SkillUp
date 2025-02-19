@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Correct import syntax
-import '../../index.css';
+import { Link } from 'react-router-dom';
 
-const Login = () => {
+const AdminDashboard = () => {
     return (
         <div>
-            <h1>Login</h1>
+            <h1>Dashboard</h1>
             <nav>
                 <ul>
                     <li><Link to="/">Accueil</Link></li>
@@ -20,4 +19,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default AdminDashboard;

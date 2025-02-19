@@ -1,0 +1,21 @@
+.logo 
+{
+    height: 220px;
+    position: relative;
+    bottom: -10px;
+}
+
+h4
+{
+    color: #0956CA;
+    position: relative;
+    top: -100px;
+    font-family: 'Montserrat';
+}
+.Inputs
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: -90px;
+}

@@ -14,3 +14,4 @@ Actuellement, deux plugins officiels sont disponibles :
 ## Expanding the ESLint configuration
 
 Si vous développez une application de production, il est recommandé de mettre à jour la configuration pour activer les règles de linting basées sur le type.
+ 
