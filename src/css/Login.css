@@ -17,5 +17,19 @@ h4
     position: relative;
     display: flex;
     flex-direction: column;
-    top: -90px;
+    top: -110px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+input::placeholder
+{
+    color: black;
+}
+
+button
+{
+    position: relative;
+  
 }
