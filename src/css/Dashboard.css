@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F4F6F9;
+    margin: 0;
+  }
+  
+  .dashboard-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #0956CA;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .logo span {
+    color: #66BB6A;
+  }
+  
+  nav a, .bottom-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  nav a:hover, .bottom-menu a:hover {
+    background-color: #3949AB;
+  }
+  
+  .active {
+    background-color: #3949AB;
+  }
+  
+  .dashboard-content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .dashboard-title {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .dashboard-title span {
+    color: #1E88E5;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+
+  }
+  
+  .stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 150px;
+  }
+  
+  .stat-card .value {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .charts-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .chart-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .success-rate {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .success-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .legend {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  
+  .dot-l1 { background: #FF6384; }
+  .dot-l2 { background: #36A2EB; }
+  .dot-l3 { background: #FFCE56; }
+  .dot-m2 { background: #4BC0C0; }
+  

@@ -1,7 +1,7 @@
-import React from 'react'; // Correct import syntax
 import { useState } from 'react'; // Correct import syntax
 import '../../index.css';
 import Dark from '../../assets/images/SkillUp-Dark.png'
+import Vector from '../../assets/images/Vector1.png'
 import Input from '../../components/Input';
 import '../../css/Login.css'
 
@@ -11,6 +11,18 @@ const StudentLogin = () => {
     const [mdp, setMdp] = useState('');
     return (
         <>
+
+           <img 
+                style={{
+                    position: 'absolute',
+                    left:0,
+                    top:0,
+                    height: '200px'
+                }}
+                src={Vector} 
+                alt="Vector" 
+            />
+          
            <div>
                <img 
                     src={Dark} 
