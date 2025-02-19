@@ -7,13 +7,13 @@ import Input from '../../components/Input';
 import '../../css/Login.css';
 
 const StudentLogin = () => {
-    const [matricule, setMatricule] = useState<string>(''); 
+    const [id, setID] = useState<string>(''); 
     const [mdp, setMdp] = useState<string>('');
     const navigate = useNavigate(); 
     
     const handleLogin = () => {
-        if (matricule === '11468123' && mdp === 'slay12345') {
-            navigate('/student/dashboard'); // Redirection vers la page étudiante
+        if (id === 'admin' && mdp === 'admin12345') {
+            navigate('/admin/dashboard'); // Redirection vers la page étudiante
         } else {
             alert('Identifiant ou mot de passe incorrect !');
         }
@@ -39,14 +39,14 @@ const StudentLogin = () => {
                     className='logo'
                 />
             </div>  
-            <h4>ETUDIANT</h4>
+            <h4>ADMINISTRATION</h4>
 
             <div className='Inputs'>
                 <Input 
                     type="text"
-                    placeholder="Matricule" 
-                    value={matricule} 
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMatricule(e.target.value)} 
+                    placeholder="Identifiant" 
+                    value={id} 
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setID(e.target.value)} 
                 />
                 <Input 
                     type="password"
