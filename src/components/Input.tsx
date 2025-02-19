@@ -1,17 +1,22 @@
-import './Input.css'
-const Input = ({type,placeholder, value, onChange}) => {
+import React from 'react';
+import './Input.css';
 
-    return (
-
-    <input  
-
-        type={type}
-        value={value} 
-        placeholder={placeholder}
-        onChange={onChange}
-    />
-
-    )
+interface InputProps {
+    type: string;
+    placeholder: string;
+    value: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export default Input
+const Input: React.FC<InputProps> = ({ type, placeholder, value, onChange }) => {
+    return (
+        <input  
+            type={type}
+            value={value} 
+            placeholder={placeholder}
+            onChange={onChange}
+        />
+    );
+}
+
+export default Input;

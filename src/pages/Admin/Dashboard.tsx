@@ -5,23 +5,30 @@ import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, LineChart, Line, Car
 
 const Sidebar = () => {
   return (
-    <div style={{ fontFamily: 'Montserrat' }} className="sidebar">
+    <div className="sidebar" style={{ fontFamily: 'Montserrat' }}>
       <img style={{ height: '150px', width: '150px' }} src={TllyW} alt="Logo-SkillUp" />
       <nav>
-        <a href="#" className="active"> Accueil</a>
-        <a href="#"> Détails</a>
+        <a href="#" className="active">Accueil</a>
+        <a href="#">Détails</a>
       </nav>
       <div className="bottom-menu">
-        <a href="#"> Paramètres</a>
-        <a href="#"> Aide</a>
+        <a href="#">Paramètres</a>
+        <a href="#">Aide</a>
       </div>
     </div>
   );
 };
 
-const StatCard = ({ title, value, description, color }) => {
+interface StatCardProps {
+  title: string;
+  value: string;
+  description: string;
+  color: string;
+}
+
+const StatCard: React.FC<StatCardProps> = ({ title, value, description, color }) => {
   return (
-    <div style={{ color: 'black', fontFamily: 'Montserrat', fontWeight: 'bolder', marginBottom: '20px' }} className="stat-card">
+    <div className="stat-card" style={{ fontFamily: 'Montserrat', fontWeight: 'bolder', marginBottom: '20px' }}>
       <h3 style={{ fontSize: '13px', textAlign: 'left' }}>{title}</h3>
       <p className="value" style={{ color, textAlign: 'left' }}>{value}</p>
       <p className="description">{description}</p>
@@ -47,19 +54,20 @@ const lineData = [
 
 const SuccessRate = () => {
   return (
-    <div style={{ color: 'black', fontFamily: 'Montserrat' }} className="chart-box success-rate">
+    <div className="chart-box success-rate" style={{ fontFamily: 'Montserrat' }}>
       <h3>Taux de réussite moyen</h3>
       <div className="success-content">
-        <div style={{ fontFamily: 'Montserrat' }} className="legend">
-          <div className="legend-item"><span className="dot dot-l1"></span> L1 <strong>40%</strong></div>
-          <div className="legend-item"><span className="dot dot-l2"></span> L2 <strong>60%</strong></div>
-          <div className="legend-item"><span className="dot dot-l3"></span> L3 <strong>45%</strong></div>
-          <div className="legend-item"><span className="dot dot-m2"></span> Master2 <strong>50%</strong></div>
+        <div className="legend">
+          {pieData.map((item) => (
+            <div key={item.name} className="legend-item">
+              <span className="dot" style={{ backgroundColor: item.color }}></span> {item.name} <strong>{item.value}%</strong>
+            </div>
+          ))}
         </div>
         <PieChart width={120} height={120}>
           <Pie data={pieData} dataKey="value" innerRadius={40} outerRadius={50} paddingAngle={5}>
             {pieData.map((entry, index) => (
-              <Cell key={index} fill={entry.color} />
+              <Cell key={`cell-${index}`} fill={entry.color} />
             ))}
           </Pie>
           <Tooltip />
@@ -71,20 +79,23 @@ const SuccessRate = () => {
 
 const Dashboard = () => {
   return (
-    <div className="dashboard-container" style={{ display: 'flex', boxShadow:'0 2px 5px rgba(0,0,0,0.3)' }}>
+    <div className="dashboard-container" style={{ display: 'flex', boxShadow: '0 2px 5px rgba(0,0,0,0.3)' }}>
       <Sidebar />
-      <div className="dashboard-content" style={{ flex: 1, padding: '20px', display: 'flex', flexDirection: 'column', backgroundColor:'white' }}>
-        <img style={{ height: '200px', alignSelf: 'flex-start', position:'relative', top: '-60px' }} src={Skill} alt="SkillUp" />
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px', position:'relative', top:'-100px' }} className="side1">
+      <div className="dashboard-content" style={{ flex: 1, padding: '20px', display: 'flex', flexDirection: 'column', backgroundColor: 'white' }}>
+        <img style={{ height: '200px', alignSelf: 'flex-start', position: 'relative', top: '-60px' }} src={Skill} alt="SkillUp" />
+        
+        <div className="side1" style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px', position: 'relative', top: '-100px' }}>
           <StatCard title="Moyenne générale des élèves" value="13.12" description="✅ Supérieure à l’année dernière" color="#27AE60" />
           <SuccessRate />
         </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', position:'relative', top: '-100px'}} className="side2">
+        
+        <div className="side2" style={{ display: 'flex', justifyContent: 'space-between', position: 'relative', top: '-100px' }}>
           <StatCard title="Nombre d’étudiants" value="782" description="📊 Courbe en évolution" color="#2C3E50" />
           <StatCard title="Nombre d’étudiants admis" value="327" description="📈 Courbe constante" color="#2980B9" />
           <StatCard title="Meilleurs élèves" value="ADISSO Nelxie" description="📚 Filière IA" color="#9B59B6" />
         </div>
-        <div className="side3" style={{color:'black', fontFamily:'Montserrat', position:'relative', top: '-100px'}}>
+        
+        <div className="side3" style={{ fontFamily: 'Montserrat', position: 'relative', top: '-100px' }}>
           <h3>Progression</h3>
           <p>Progression de la moyenne des étudiants de l’école au fil des années</p>
           <ResponsiveContainer width="100%" height={200}>

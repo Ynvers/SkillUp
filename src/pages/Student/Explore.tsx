@@ -1,7 +1,6 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/SkillUp-Dark.png';
-import Bg from '../../assets/images/bg.jpg';
 import '../../css/Explore.css';
 
 const StudentExplore = () => {
