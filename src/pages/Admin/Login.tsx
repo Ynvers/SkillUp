@@ -47,12 +47,14 @@ const StudentLogin = () => {
                     placeholder="Identifiant" 
                     value={id} 
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => setID(e.target.value)} 
+                    style={{}}
                 />
                 <Input 
                     type="password"
                     placeholder="Mot de passe" 
                     value={mdp} 
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMdp(e.target.value)} 
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMdp(e.target.value)}
+                    style={{}} 
                 />
             </div>
 

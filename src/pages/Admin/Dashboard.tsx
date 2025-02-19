@@ -1,4 +1,4 @@
-import "../../css/Dashboard.css"; 
+import "../../css/Dashboard.css";
 import TllyW from '../../assets/images/SkillUp-tlly-White.png';
 import Skill from '../../assets/images/SkillUp-Dark.png';
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis } from "recharts";
@@ -77,12 +77,27 @@ const SuccessRate = () => {
   );
 };
 
+const Avatar = ({ image }: { image?: string }) => {
+  return (
+    <div className="avatar-container">
+      {image ? (
+        <img className="avatar" src={image} alt="Avatar" />
+      ) : (
+        <div className="avatar-placeholder" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '50px', height: '50px', borderRadius: '50%', backgroundColor: '#ccc', fontSize: '20px', fontWeight: 'bold', position:'relative', top:'-60px' }}>A</div>
+      )}
+    </div>
+  );
+};
+
 const Dashboard = () => {
   return (
-    <div className="dashboard-container" style={{ display: 'flex', boxShadow: '0 2px 5px rgba(0,0,0,0.3)' }}>
+    <div className="dashboard-container" style={{ display: 'flex', boxShadow: '0 2px 5px rgba(0,0,0,0.3)', color: 'black' }}>
       <Sidebar />
       <div className="dashboard-content" style={{ flex: 1, padding: '20px', display: 'flex', flexDirection: 'column', backgroundColor: 'white' }}>
-        <img style={{ height: '200px', alignSelf: 'flex-start', position: 'relative', top: '-60px' }} src={Skill} alt="SkillUp" />
+        <div className="header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <img style={{ height: '200px', alignSelf: 'flex-start', position: 'relative', top: '-60px' }} src={Skill} alt="SkillUp" />
+          <Avatar />
+        </div>
         
         <div className="side1" style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px', position: 'relative', top: '-100px' }}>
           <StatCard title="Moyenne générale des élèves" value="13.12" description="✅ Supérieure à l’année dernière" color="#27AE60" />
